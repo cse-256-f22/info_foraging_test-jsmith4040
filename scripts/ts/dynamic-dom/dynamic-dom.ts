@@ -3,6 +3,7 @@ import { Accordion } from './accordion';
 import { doSomething } from './do-something';
 import { HTMLContent, itemsToCache } from './html-imports';
 import { Slideshow } from './slideshow';
+import { setupSticky } from './sticky';
 
 // Put all function calls that need to be made on every page load inside the setupAll function body.
 export function PutStudentPageLoadOperationsInsideThisStudentBody() {
@@ -17,6 +18,7 @@ export async function setupAll() {
     Slideshow.setupAll();
     Accordion.setupAll();
     PutStudentPageLoadOperationsInsideThisStudentBody();
+    setupSticky();
     console.log('reloaded');
 }
 
